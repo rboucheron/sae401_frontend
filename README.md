@@ -5,10 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## install project 
 `npm i` or `npm install` 
 
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+
 ## Add a new component
 
 To add a new component, use the Angular CLI command:
-ng g c NomDuComposant --skip-styles 
+`ng g c NomDuComposant --skip-styles`
 
 This command generates a new component without a stylesheet. Replace "ComponentName" with the name you want for your component.
 
@@ -60,10 +65,6 @@ Replace "ServiceName" with the name you want for your service.
 | overflow-hidden      | overflow: hidden;              |
 
 For more Tailwind CSS classes, refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/installation).
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
