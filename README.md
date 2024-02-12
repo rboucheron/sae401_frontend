@@ -9,6 +9,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+<<<<<<< Updated upstream
+=======
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+>>>>>>> Stashed changes
 
 ## Add a new component
 
@@ -22,6 +28,7 @@ This command generates a new component without a stylesheet. Replace "ComponentN
 To add a new service, use the Angular CLI command:
 
 `ng g s NomDuService`
+
 Replace "ServiceName" with the name you want for your service.
 
 
@@ -69,10 +76,6 @@ For more Tailwind CSS classes, refer to the [Tailwind CSS documentation](https:/
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
