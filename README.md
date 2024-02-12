@@ -38,11 +38,15 @@ Replace "ServiceName" with the name you want for your service.
 |----------------------|--------------------------------|
 | bg-red-300           | background: red;               |
 | p-2                  | padding: 0.5rem;               |
-| m-2                  | margin: 0.5rem;                |
 | pt                   | padding-top;                   |
 | pl                   | padding-left;                  |
 | pr                   | padding-right;                 |
 | pb                   | padding-bottom;                |
+| m-2                  | margin: 0.5rem;                |
+| mt                   | margin-top;                    |
+| ml                   | margin-left;                   |
+| mr                   | margin-right;                  |
+| mb                   | margin-bottom;                 |
 | text-red             | color: red;                    |
 | text-sm              | font-size: 0.875rem;           |
 | text-center          | text-align: center;            |
@@ -68,7 +72,9 @@ Replace "ServiceName" with the name you want for your service.
 | py-4                 | padding-top: 1rem; padding-bottom: 1rem; |
 | px-6                 | padding-left: 1.5rem; padding-right: 1.5rem; |
 | w-full               | width: 100%;                   |
+| w-1/2                | width: 50%;                    |
 | h-full               | height: 100%;                  |
+| h-1/2                | height: 50%;                   |
 | overflow-hidden      | overflow: hidden;              |
 
 For more Tailwind CSS classes, refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/installation).
