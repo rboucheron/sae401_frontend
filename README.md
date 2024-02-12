@@ -73,6 +73,76 @@ Replace "ServiceName" with the name you want for your service.
 
 For more Tailwind CSS classes, refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/installation).
 
+## API call and display Data 
+
+To call the API in your service, use the following TypeScript code:
+
+```typescript
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GithubLoginService {
+  apiUrl: string = 'https://api.github.com/users/';
+
+  constructor(private http: HttpClient) {}
+
+  public getUserGitHubInfo(userName: string): Observable<any> {
+    const apiUrlWithUsername = `${this.apiUrl}${userName}`;
+    return this.http.get(apiUrlWithUsername);
+  }
+}
+
+
+```typescript
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { githublogin } from '../git-hub-login.service';
+
+
+@Component({
+  selector: 'app-session',
+  templateUrl: './session.component.html',
+})
+export class SessionComponent {
+  OpenFormBtn!: boolean;
+  GitHubInfo!: string;
+  UserInfo!: any;
+  FormSubmit!: boolean; 
+  constructor(private Githublogin: githublogin) {}
+  ngOnInit() {
+    this.GitHubInfo = '';
+    this.OpenFormBtn = false;
+    this.FormSubmit = false; 
+  }
+  openFormClique() {
+    if (this.OpenFormBtn == false) {
+      this.OpenFormBtn = true;
+    } else {
+      this.OpenFormBtn = false;
+    }
+  }
+  setGitHubInfo()  {
+    this.Githublogin.GetUserGitHubInfo(this.GitHubInfo).subscribe(
+      (data: any) => {
+        this.UserInfo = data;
+   
+      },
+      (error: any) => {
+        console.error('Error fetching IP address:', error);
+      }
+    );
+
+    this.FormSubmit = true; 
+    this.OpenFormBtn = false;
+  }
+}
+```typescript
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
