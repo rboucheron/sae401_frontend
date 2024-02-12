@@ -3,12 +3,12 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
 ## install project 
-npm i or npm install 
+`npm i` or `npm install` 
 
 ## Add a new component
 
 To add a new component, use the Angular CLI command:
-ng g c NomDuComposant --skip-styles 
+`ng g c NomDuComposant --skip-styles` 
 
 This command generates a new component without a stylesheet. Replace "ComponentName" with the name you want for your component.
 
@@ -16,7 +16,7 @@ This command generates a new component without a stylesheet. Replace "ComponentN
 
 To add a new service, use the Angular CLI command:
 
-ng g s NomDuService
+`ng g s NomDuService`
 Replace "ServiceName" with the name you want for your service.
 
 
