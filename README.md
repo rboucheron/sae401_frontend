@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Add a new component
 
 To add a new component, use the Angular CLI command:
-`ng g c NomDuComposant --skip-styles`
+ng g c NomDuComposant --skip-styles 
 
 This command generates a new component without a stylesheet. Replace "ComponentName" with the name you want for your component.
 
