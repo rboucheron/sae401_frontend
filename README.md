@@ -79,7 +79,7 @@ Replace "ServiceName" with the name you want for your service.
 
 For more Tailwind CSS classes, refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/installation).
 
-## API call and display Data 
+## API call 
 
 To call the API in your service, use the following TypeScript code:
 
