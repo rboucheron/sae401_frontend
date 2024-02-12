@@ -97,52 +97,6 @@ export class GithubLoginService {
 }
 
 
-```typescript
-
-```typescript
-import { Component, OnInit } from '@angular/core';
-import { githublogin } from '../git-hub-login.service';
-
-
-@Component({
-  selector: 'app-session',
-  templateUrl: './session.component.html',
-})
-export class SessionComponent {
-  OpenFormBtn!: boolean;
-  GitHubInfo!: string;
-  UserInfo!: any;
-  FormSubmit!: boolean; 
-  constructor(private Githublogin: githublogin) {}
-  ngOnInit() {
-    this.GitHubInfo = '';
-    this.OpenFormBtn = false;
-    this.FormSubmit = false; 
-  }
-  openFormClique() {
-    if (this.OpenFormBtn == false) {
-      this.OpenFormBtn = true;
-    } else {
-      this.OpenFormBtn = false;
-    }
-  }
-  setGitHubInfo()  {
-    this.Githublogin.GetUserGitHubInfo(this.GitHubInfo).subscribe(
-      (data: any) => {
-        this.UserInfo = data;
-   
-      },
-      (error: any) => {
-        console.error('Error fetching IP address:', error);
-      }
-    );
-
-    this.FormSubmit = true; 
-    this.OpenFormBtn = false;
-  }
-}
-```typescript
-
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
