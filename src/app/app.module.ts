@@ -8,6 +8,8 @@ import { LucideAngularModule, ShoppingBasket, UserCircle} from 'lucide-angular';
 import { HomeComponent } from './home/home.component';
 import { MenusComponent } from './menus/menus.component';
 import { SushiComponent } from './sushi/sushi.component';
+import { CardComponent } from './card/card.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { SushiComponent } from './sushi/sushi.component';
     HeaderComponent,
     HomeComponent,
     MenusComponent,
-    SushiComponent
+    SushiComponent,
+    CardComponent,
+    FooterComponent
   ],
 
   imports: [

@@ -3,7 +3,8 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     fontFamily: {
-      sans: ["Josefin", "hiromisake"],
+      serif: ["Josefin", 'serif'],
+      sans: ["Lilita", 'sans'],
 
     },
   },
