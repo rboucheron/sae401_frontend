@@ -10,6 +10,7 @@ import { MenusComponent } from './menus/menus.component';
 import { SushiComponent } from './sushi/sushi.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import { BoxcardsComponent } from './boxcards/boxcards.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     MenusComponent,
     SushiComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    BoxcardsComponent
   ],
 
   imports: [
