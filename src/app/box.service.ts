@@ -6,10 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BoxService {
-  apiUrl: string = 'http://localhost:4000/api/boxs'; // Ajout du protocole HTTP
-
+  apiUrl: string = 'http://localhost:4000/api/boxs';
   constructor(private http: HttpClient) {}
-
   public getBoxs(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
