@@ -4,9 +4,15 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ["Josefin", 'serif'],
-      sans: ["Lilita", 'sans'],
+
+      sans: [["Lilita", 'sans'], ["hiromisake", 'sans']],
+     
 
     },
+    backgroundImage: {
+      'home-image': "url('./assets/images/chef.jpg')"
+
+    }
   },
   plugins: [],
 };

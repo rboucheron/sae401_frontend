@@ -1,17 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BoxService } from '../box.service';
+
 @Component({
   selector: 'app-boxcards',
   templateUrl: './boxcards.component.html',
 })
-export class BoxcardsComponent {
+export class BoxcardsComponent implements OnInit {
 
-  boxs!: any;
-  constructor(private BoxService: BoxService) {}
+  boxs: any[] = []; 
+  constructor(private boxService: BoxService) {}
+
+  ngOnInit() {
+    this.setBoxs();
+  }
+
   setBoxs() {
-    this.BoxService.getBoxs().subscribe(
+    this.boxService.getBoxs().subscribe(
       (data: any) => {
-        this.boxs = data;
+        this.boxs = data; 
       },
       (error: any) => {
         console.error('Error fetching IP address:', error);
