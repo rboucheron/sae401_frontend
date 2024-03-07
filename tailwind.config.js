@@ -5,7 +5,9 @@ module.exports = {
     fontFamily: {
       serif: ["Josefin", 'serif'],
 
-      sans: [["Lilita", 'sans'], ["hiromisake", 'sans']],
+      sans: ["Lilita", 'sans'],
+
+      hiro :["hiromisake", 'sans'],
      
 
     },
