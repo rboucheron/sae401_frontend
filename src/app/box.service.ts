@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BoxService {
-  apiUrl: string = 'http://localhost:3000/api/box';
+  apiUrl: string = 'http://localhost:3000/api/box'; 
+
   constructor(private http: HttpClient) {}
 
   public getBoxs(): Observable<any> {

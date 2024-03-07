@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { LucideAngularModule, ShoppingBasket, UserCircle} from 'lucide-angular';
+import { LucideAngularModule, ShoppingBasket, UserCircle, UtensilsCrossed} from 'lucide-angular';
 import { HomeComponent } from './home/home.component';
 import { MenusComponent } from './menus/menus.component';
 import { SushiComponent } from './sushi/sushi.component';
@@ -29,7 +29,7 @@ import { BoxcardsComponent } from './boxcards/boxcards.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule, 
-    LucideAngularModule.pick({ ShoppingBasket, UserCircle})
+    LucideAngularModule.pick({ ShoppingBasket, UserCircle,  UtensilsCrossed})
   ],
 
   providers: [],
