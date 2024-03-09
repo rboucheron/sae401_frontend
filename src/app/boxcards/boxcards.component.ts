@@ -20,7 +20,7 @@ export class BoxcardsComponent implements OnInit {
         this.boxs = data; 
       },
       (error: any) => {
-        console.error('Error fetching IP address:', error);
+        console.error('Error fetching api:', error);
       }
     );
   }

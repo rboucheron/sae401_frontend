@@ -13,4 +13,9 @@ export class BoxService {
   public getBoxs(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+  public getBox(id: number): Observable<any> {
+    const url: string = this.apiUrl + '?id=' + id; 
+    return this.http.get(url);
+
+  }
 }

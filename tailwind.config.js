@@ -3,18 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     fontFamily: {
-      serif: ["Josefin", 'serif'],
+      serif: ["Josefin", "serif"],
 
-      sans: ["Lilita", 'sans'],
+      sans: ["Lilita", "sans"],
 
-      hiro :["hiromisake", 'sans'],
-     
-
+      hiro: ["hiromisake", "sans"],
     },
     backgroundImage: {
-      'home-image': "url('./assets/images/chef.jpg')"
-
-    }
+      "home-image": "url('./assets/images/chef.jpg')",
+    },
   },
   plugins: [],
 };
