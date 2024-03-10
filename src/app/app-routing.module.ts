@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'sushi', component: SushiComponent },
   { path: 'menus', component: BoxcardsComponent },
   { path: 'details/:id', component: DetailsComponent},
-  { path: '**', component: HomeComponent },
+  { path: '', component: HomeComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
