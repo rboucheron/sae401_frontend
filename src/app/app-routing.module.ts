@@ -5,12 +5,14 @@ import { MenusComponent } from './menus/menus.component';
 import { SushiComponent } from './sushi/sushi.component';
 import { DetailsComponent } from './details/details.component';
 import { BoxcardsComponent } from './boxcards/boxcards.component';
+import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
  
   { path: 'sushi', component: SushiComponent },
   { path: 'menus', component: BoxcardsComponent },
   { path: 'details/:id', component: DetailsComponent},
   { path: '', component: HomeComponent },
+  { path: 'cart', component: CartComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -12,6 +12,7 @@ import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { BoxcardsComponent } from './boxcards/boxcards.component';
 import { DetailsComponent } from './details/details.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DetailsComponent } from './details/details.component';
     CardComponent,
     FooterComponent,
     BoxcardsComponent,
-    DetailsComponent
+    DetailsComponent,
+    CartComponent
   ],
 
   imports: [
