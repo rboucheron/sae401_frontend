@@ -8,8 +8,7 @@
             <h2 class="text-xl text-white w-full text-start">{{box.price | currency: 'EUR'}}</h2>
             <button
                 class="w-full m-3 p-2 text-white transition ease-in duration-200 rounded-full border border-white-500 hover:bg-green-500 hover:text-white hover:border-green-500 text-center  mr-auto border-solid focus:outline-none  "
-                (click)="addBoxtoCard()"
-                >
+                (click)="addBoxtoCard()">
                 Ajouter au Panier
             </button>
         </div>
@@ -18,6 +17,13 @@
             <ul>
                 <li *ngFor="let aliment of aliments; index as i;" class="text-white text-sm">{{aliment.aliment_name}} x
                     {{aliment.quantity}}</li>
+            </ul>
+        </div>
+        <div class=" w-3/4 m-auto mt-8">
+            <h3 class="text-xl w-full text-center text-white">Ingrédients</h3>
+            <ul>
+                <li *ngFor="let aliment of aliments; index as i;" class="text-white text-sm">{{savor.savor_name}} <br>
+                    {{savor.image}}</li>
             </ul>
         </div>
     </div>
