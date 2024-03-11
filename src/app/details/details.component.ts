@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BoxService } from '../box.service';
+import { LocalService } from '../local.service';
+import { Box } from '../../model/box';
 
 
 @Component({
@@ -10,9 +12,9 @@ import { BoxService } from '../box.service';
 })
 export class DetailsComponent implements OnInit{
   private id !: number; 
-  public box !: any; 
+  public box !: Box; 
   public aliments !: any; 
-  constructor( private activated: ActivatedRoute, private boxService: BoxService) {}
+  constructor( private activated: ActivatedRoute, private boxService: BoxService, private LocalService: LocalService) {}
   ngOnInit() {
     this.activated.params.subscribe(
       (data) => {
@@ -21,8 +23,8 @@ export class DetailsComponent implements OnInit{
     );
     this.recoverBox();
   }
-  private recoverBox() {
 
+  private recoverBox() {
     this.boxService.getBox(this.id).subscribe(
       (data: any) => {
         this.box = data[0]; 
@@ -33,8 +35,12 @@ export class DetailsComponent implements OnInit{
         console.error('Error fetching api:', error);
       }
     );
-
   } 
+
+  public addBoxtoCard(){
+    const title : string =  "box" + this.id;
+    this.LocalService.SetLocalStorage(title, this.box); 
+  }
 
 
 }
