@@ -8,7 +8,7 @@ import { BoxcardsComponent } from './boxcards/boxcards.component';
 import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
  
-  { path: 'sushi', component: SushiComponent },
+  { path: 'boisson', component: SushiComponent },
   { path: 'menus', component: BoxcardsComponent },
   { path: 'details/:id', component: DetailsComponent},
   { path: '', component: HomeComponent },
