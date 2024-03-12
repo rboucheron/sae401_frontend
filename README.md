@@ -102,7 +102,5 @@ export class GithubLoginService {
   }
 }
 
-LIEN DU TRELLO 
-https://trello.com/invite/b/bB11rJYZ/ATTIa3332ba1b0ecb6a44310823187a12c4757D9D428/sae-401
 
 
