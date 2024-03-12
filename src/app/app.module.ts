@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { LucideAngularModule, ShoppingBasket, UserCircle, UtensilsCrossed, Menu} from 'lucide-angular';
 import { HomeComponent } from './home/home.component';
 import { MenusComponent } from './menus/menus.component';
-import { SushiComponent } from './sushi/sushi.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { BoxcardsComponent } from './boxcards/boxcards.component';
@@ -21,7 +20,6 @@ import { CartComponent } from './cart/cart.component';
     HeaderComponent,
     HomeComponent,
     MenusComponent,
-    SushiComponent,
     CardComponent,
     FooterComponent,
     BoxcardsComponent,
