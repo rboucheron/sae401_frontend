@@ -6,9 +6,10 @@ import { DetailsComponent } from './details/details.component';
 import { BoxcardsComponent } from './boxcards/boxcards.component';
 import { CartComponent } from './cart/cart.component';
 import { DrinkcardComponent } from './drinkcard/drinkcard.component';
+import { DrinkcardsComponent } from './drinkcards/drinkcards.component';
 const routes: Routes = [
  
-  { path: 'boisson', component: DrinkcardComponent },
+  { path: 'boisson', component: DrinkcardsComponent },
   { path: 'menus', component: BoxcardsComponent },
   { path: 'details/:id', component: DetailsComponent},
   { path: '', component: HomeComponent },
