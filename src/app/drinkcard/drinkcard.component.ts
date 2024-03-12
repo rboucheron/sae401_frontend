@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input, input } from '@angular/core';
+import { Drink } from '../../model/drink';
 
 @Component({
   selector: 'app-drinkcard',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './drinkcard.component.css'
 })
 export class DrinkcardComponent {
-
+  @Input() Drink!: Drink; 
 }
