@@ -15,6 +15,7 @@ export class DetailsComponent implements OnInit{
   private id !: number; 
   public box !: Box; 
   public aliments !: any; 
+  public savor !: any; 
   constructor( private activated: ActivatedRoute, private boxService: BoxService, private LocalService: LocalService, private ShoppingcartsService: ShoppingcartsService) {}
   ngOnInit() {
     this.activated.params.subscribe(
@@ -30,7 +31,8 @@ export class DetailsComponent implements OnInit{
       (data: any) => {
         this.box = data[0]; 
         this.aliments = data[1]; 
-        console.log( this.aliments ); 
+        this.savor = data[2]; 
+        console.log( this.savor ); 
       },
       (error: any) => {
         console.error('Error fetching api:', error);
@@ -41,7 +43,6 @@ export class DetailsComponent implements OnInit{
   public addBoxtoCard(box :any){
     //console.log(this.box);
     this.ShoppingcartsService.addToCart(box);
-    window.alert('La Box est bien dans le panier');
     /*const title : string =  "box" + this.id;
     this.LocalService.SetLocalStorage(title, this.box); */
   }
