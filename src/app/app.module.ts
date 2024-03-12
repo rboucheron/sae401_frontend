@@ -13,6 +13,7 @@ import { BoxcardsComponent } from './boxcards/boxcards.component';
 import { DetailsComponent } from './details/details.component';
 import { CartComponent } from './cart/cart.component';
 import { DrinkcardComponent } from './drinkcard/drinkcard.component';
+import { DrinkscardsComponent } from './drinkscards/drinkscards.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { DrinkcardComponent } from './drinkcard/drinkcard.component';
     BoxcardsComponent,
     DetailsComponent,
     CartComponent,
-    DrinkcardComponent
+    DrinkcardComponent,
+    DrinkscardsComponent
   ],
 
   imports: [
