@@ -43,8 +43,8 @@ export class DetailsComponent implements OnInit{
   public addBoxtoCard(box :any){
     //console.log(this.box);
     this.ShoppingcartsService.addToCart(box);
-    /*const title : string =  "box" + this.id;
-    this.LocalService.SetLocalStorage(title, this.box); */
+    const title : string =  "box" + this.id;
+    this.LocalService.SetLocalStorage(title, this.box); 
   }
 
 
