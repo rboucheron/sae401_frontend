@@ -3,7 +3,7 @@ import { DrinkService } from '../drink.service';
 @Component({
   selector: 'app-drinkcards',
   templateUrl: './drinkcards.component.html',
-  styleUrl: './drinkcards.component.css'
+
 })
 export class DrinkcardsComponent implements OnInit {
   public drinks: any; 

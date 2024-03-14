@@ -32,7 +32,6 @@ export class DetailsComponent implements OnInit{
         this.box = data[0]; 
         this.aliments = data[1]; 
         this.savor = data[2]; 
-        console.log( this.savor ); 
       },
       (error: any) => {
         console.error('Error fetching api:', error);
@@ -40,11 +39,11 @@ export class DetailsComponent implements OnInit{
     );
   } 
 
-  public addBoxtoCard(box :any){
-    //console.log(this.box);
-    this.ShoppingcartsService.addToCart(box);
-    const title : string =  "box" + this.id;
-    this.LocalService.SetLocalStorage(title, this.box); 
+  public addBoxtoCard(){
+
+   // this.ShoppingcartsService.addToCart(box);
+
+    this.LocalService.SetBox(this.box)
   }
 
 
