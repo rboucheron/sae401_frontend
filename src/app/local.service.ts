@@ -19,6 +19,9 @@ export class LocalService {
     boxs.push(items);
     localStorage.setItem('box', JSON.stringify(boxs));
   }
+  public SetBoxs(items: any) {
+    localStorage.setItem('box', JSON.stringify(items));
+  }
   public GetDrink() {
     const drinks: any = localStorage.getItem('drink');
     return JSON.parse(drinks);

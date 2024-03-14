@@ -3,6 +3,7 @@ import { ShoppingcartsService } from '../shoppingcarts.service';
 import { LocalService } from '../local.service';
 import { OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -13,6 +14,5 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.item = this.LocalService.GetBox();
-
   }
 }

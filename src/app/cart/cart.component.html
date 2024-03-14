@@ -1,23 +1,30 @@
-
 <div class=" mt-32">
-    <table class=" table-fixed border-spacing-4  text-white ">
+    <table class="w-full table-fixed border-spacing-4  text-white ">
         <thead>
             <tr>
-                <th>Détails</th>
-                <!--<th>Quantité</th>-->
-                <th>Total</th>
+                <th class="text-2xl font-serif font-light">Détails</th>
+                <th class="text-2xl font-serif font-light">Quantité</th>
+                <th class="text-2xl font-serif font-light">Total</th>
             </tr>
         </thead>
-        <tbody  *ngFor="let item of item">
-        <tr>
-            
-            
-            <td class="border-spacing-4">{{ item.name }}<img [src]="item.image" class="size-52 rounded-md" [alt]="item.name"></td>
+        <tbody class="w-full">
+            <tr *ngFor="let item of item" class="w-full">
+                <td class="flex flex-col p-4 items-center">
+                    <h2 class="text-xl p-2 text-white">{{ item.name }}</h2><img [src]="item.image"
+                        class="size-52 rounded-md" [alt]="item.name">
+                </td>
+                <td class="border-spacing-4  ">
+                    <div
+                        class="w-1/2 m-auto flex justify-center space-x-8 items-center border border-white rounded-full">
+                        <button class="p-2 text-2xl">-</button> <span class="p-2  text-xl">{{item.quantity}}</span>
+                        <button class="p-2  text-2xl">+</button>
+                    </div>
+                </td>
+                <td class="border-spacing-4">
+                    <p class="w-full text-2xl text-center">{{ item.price | currency}}</p>
 
-            <td>{{ item.price | currency}}</td>
-        </tr>
-    </tbody>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </div>
-
-
