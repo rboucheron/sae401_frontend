@@ -14,7 +14,7 @@ export class LocalService {
       return [];
     }
   }
-  public SetBox(items: any): void {
+  public SetBox(items: any) {
     let boxs: any[] = this.GetBox();
     boxs.push(items);
     localStorage.setItem('box', JSON.stringify(boxs));

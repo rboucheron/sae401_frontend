@@ -1,10 +1,23 @@
-<div class="cart-item mt-24" *ngFor="let item of item">
-    <span>{{ item.name }}</span>
-    <span>{{ item.price | currency}}</span>
-    <span>{{ item.image }}</span>
 
+<div class=" mt-32">
+    <table class=" table-fixed border-spacing-4  text-white ">
+        <thead>
+            <tr>
+                <th>Détails</th>
+                <!--<th>Quantité</th>-->
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody  *ngFor="let item of item">
+        <tr>
+            
+            
+            <td class="border-spacing-4">{{ item.name }}<img [src]="item.image" class="size-52 rounded-md" [alt]="item.name"></td>
+
+            <td>{{ item.price | currency}}</td>
+        </tr>
+    </tbody>
+    </table>
 </div>
-<!--
 
 
--->

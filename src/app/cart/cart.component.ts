@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   constructor(private LocalService: LocalService) {}
 
   ngOnInit() {
-    this.item = this.LocalService.GetBox;
+    this.item = this.LocalService.GetBox();
+
   }
 }
