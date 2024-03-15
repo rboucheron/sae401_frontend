@@ -15,7 +15,7 @@ export class HeaderComponent  {
     
   
     public itemsCount () {
-      return this.LocalService.CountBox(); 
+      return this.LocalService.getTotalCount(); 
     }
     
 }

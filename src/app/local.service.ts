@@ -22,14 +22,23 @@ export class LocalService {
   public SetBoxs(items: any) {
     localStorage.setItem('box', JSON.stringify(items));
   }
-  public GetDrink() {
-    const drinks: any = localStorage.getItem('drink');
-    return JSON.parse(drinks);
+  public GetDrink(): any[] {
+    const drinksString: string | null = localStorage.getItem('drink');
+    if (drinksString !== null) {
+      return JSON.parse(drinksString);
+    } else {
+      return [];
+    }
+    
   }
   public SetDrink(items: any) {
-    let drinks: any = this.GetDrink;
+    let drinks: any[] = this.GetDrink();
     drinks.push(items);
     localStorage.setItem('drink', JSON.stringify(drinks));
+  }
+
+  public SetDrinks(items: any) {
+    localStorage.setItem('drink', JSON.stringify(items));
   }
   public CountBox() {
     let boxs: any[] = this.GetBox();
@@ -41,7 +50,18 @@ export class LocalService {
     return boxcount; 
   }
   public CountDrink() {
-    let drinks: any = this.GetDrink;
-    return drinks.length;
+    let drinks: any[] = this.GetDrink();
+    let drinkscount : number =0;
+
+    for(let i:number =0; i<drinks.length; i++){
+      drinkscount = drinkscount + drinks[i].quantity;
+    }
+    return drinkscount;
+  }
+
+  public getTotalCount(): number {
+    const boxCount: number = this.CountBox();
+    const drinkCount: number = this.CountDrink();
+    return boxCount + drinkCount;
   }
 }

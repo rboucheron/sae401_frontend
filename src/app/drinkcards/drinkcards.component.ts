@@ -15,7 +15,7 @@ export class DrinkcardsComponent implements OnInit {
   }
 
   setDrinks() {
-    this.DrinkService.getDrink().subscribe(
+    this.DrinkService.getDrinks().subscribe(
       (data: any) => {
         this.drinks = data; 
       },

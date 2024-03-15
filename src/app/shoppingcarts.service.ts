@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Box } from '../model/box';
+import { Drink } from '../model/drink';
 
 
 
@@ -10,11 +11,13 @@ export class ShoppingcartsService {
 
 
   items: Box[] = [];
+  items2: Drink[] =[]
   constructor() { }
 
   addToCart(box: Box){
     this.items.push(box);
   }
+
 
   getItems(){
     return this.items;
