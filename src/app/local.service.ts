@@ -33,7 +33,12 @@ export class LocalService {
   }
   public CountBox() {
     let boxs: any[] = this.GetBox();
-    return boxs.length;
+    let boxcount : number = 0; 
+ 
+    for (let i:number = 0; i < boxs.length; i++){
+      boxcount = boxcount + boxs[i].quantity; 
+    }
+    return boxcount; 
   }
   public CountDrink() {
     let drinks: any = this.GetDrink;

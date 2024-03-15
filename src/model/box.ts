@@ -6,5 +6,6 @@ export class Box {
     public price: string,
     public image: string,
     public quantity: number, 
+    public startprice: string, 
   ) {}
 }

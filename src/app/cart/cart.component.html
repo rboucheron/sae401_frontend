@@ -16,8 +16,8 @@
                 <td class="border-spacing-4  ">
                     <div
                         class="w-1/2 m-auto flex justify-center space-x-8 items-center border border-white rounded-full">
-                        <button class="p-2 text-2xl">-</button> <span class="p-2  text-xl">{{item.quantity}}</span>
-                        <button class="p-2  text-2xl">+</button>
+                        <button class="p-2 text-2xl" (click)="removeBoxtoCard(item.id)" >-</button> <span class="p-2  text-xl">{{item.quantity}}</span>
+                        <button class="p-2  text-2xl" (click)="addBoxtoCard(item.id)">+</button>
                     </div>
                 </td>
                 <td class="border-spacing-4">

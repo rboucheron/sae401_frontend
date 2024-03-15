@@ -44,19 +44,18 @@ export class DetailsComponent implements OnInit {
 
   public addBoxtoCard() {
     const boxs: any = this.LocalService.GetBox();
-    console.log(boxs);
     const id : number = this.box.id; 
     let index : number = boxs.findIndex(function(element : Box) {
       return element.id == id;
     });
     if (index == -1) {
       this.box.quantity = 1; 
+      this.box.startprice = this.box.price; 
       this.LocalService.SetBox(this.box);
     }else{
       boxs[index].quantity ++; 
-      boxs[index].price = boxs[index].price*2; 
+      boxs[index].price = boxs[index].price +  boxs[index].startprice  ; 
       this.LocalService.SetBoxs(boxs); 
-
     }
   }
 }

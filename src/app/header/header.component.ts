@@ -1,7 +1,7 @@
-import { Component, } from '@angular/core';
+
 import { ShoppingcartsService } from '../shoppingcarts.service';
 import { LocalService } from '../local.service';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,9 +10,12 @@ import { LocalService } from '../local.service';
 export class HeaderComponent  {
 
 
+
     constructor(private ShoppingcartsService:ShoppingcartsService, private  LocalService:LocalService){}
     
-    itemsCount(){
+  
+    public itemsCount () {
       return this.LocalService.CountBox(); 
     }
+    
 }
