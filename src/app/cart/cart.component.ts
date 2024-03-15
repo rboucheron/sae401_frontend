@@ -46,7 +46,9 @@ export class CartComponent implements OnInit {
         drinks[index].price += drinks[index].startprice;
         this.LocalService.SetDrinks(drinks);
       }
+      this.findAllItems();
     }
+
   }
   
 
@@ -77,5 +79,15 @@ export class CartComponent implements OnInit {
     }
     this.findAllItems();
   }
+
+  public totalCart(): number {
+    let total = 0;
+    this.item.forEach((item: Box | Drink) => {
+      total += +item.quantity * +item.startprice;
+    });
+    
+    return total;
+  }
+  
   
 }
