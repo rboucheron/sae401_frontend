@@ -90,8 +90,9 @@ export class CartComponent implements OnInit {
     
   }
 
-  public deleteBox(id : number){
+  public deleteItem(id : number){
 this.LocalService.clearCartBox(id);
+this.LocalService.clearCartDrink(id);
 this.findAllItems();
   }
 

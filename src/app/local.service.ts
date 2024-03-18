@@ -66,18 +66,21 @@ export class LocalService {
     const drinkCount: number = this.CountDrink();
     return boxCount + drinkCount;
   }
-  public clearCartBox (id : number){
-    const box: any = this.GetBox();
-    let index : number = box.findIndex(function(element : Box) {
-      return element.id == id;});
-    box.filter(function(Box : any, index : number));
-
-    console.log(index);
+   
+  public clearCartBox (id : number){   
+    let monTableau : any = this.GetBox();
+ 
+    monTableau = monTableau.filter((Box : any) => Box.id !== id);
+    console.log(monTableau);
+    this.SetBoxs(monTableau);
+   
   }
-  public clearCartDrink (id : number){
-    const drink: any = this.GetDrink();
-    let index : number = drink.findIndex(function(element : Drink) {
-      return element.id == id;});
-    drink.splice(index);
+  public clearCartDrink(id : number){   
+    let monTableau : any = this.GetDrink();
+ 
+    monTableau = monTableau.filter((Drink : any) => Drink.id !== id);
+    console.log(monTableau);
+    this.SetDrinks(monTableau);
+   
   }
 }
