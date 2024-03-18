@@ -59,6 +59,10 @@
         </tbody>
     </table>
     <div class="m-auto w-1/2 ">
+        <span>
+            <lucide-icon name="Trash2" class="pl-2" color="#ffffff" [size]="30" [strokeWidth]="1.5"
+                (click)="deleteAll()"></lucide-icon>
+        </span>
         <span class="text-white text-2xl text-center w-full">Total de la commande : {{total | currency :
             'EUR' }}</span>
     </div>

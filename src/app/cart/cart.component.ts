@@ -61,6 +61,10 @@ export class CartComponent implements OnInit {
     this.LocalService.clearCartDrink(id);
     this.findAllItems();
   }
+  public deleteAll() : void {
+    return this.LocalService.SetDrinks([]), this.LocalService.SetBoxs([]);     
+  }
+
   private totalBoxPrice() {
     let totalPrice : number = 0;  
     this.boxs.forEach((box: any)=> {
@@ -75,6 +79,10 @@ export class CartComponent implements OnInit {
     });
     return totalPrice;
   }
+
+  
+
+
   public SetTotal() :void {
     this.total = this.totalDrinkPrice() + this.totalBoxPrice(); 
   }

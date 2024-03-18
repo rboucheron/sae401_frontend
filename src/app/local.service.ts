@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Box } from '../model/box'
-import { Drink } from '../model/drink'
+/*import { Box } from '../model/box'
+import { Drink } from '../model/drink'*/
 
 @Injectable({
   providedIn: 'root',
@@ -75,11 +75,16 @@ export class LocalService {
    
   }
   public clearCartDrink(id : number){   
-    let monTableau : any = this.GetDrink();
- 
+    let monTableau : any = this.GetDrink(); 
     monTableau = monTableau.filter((Drink : any) => Drink.id !== id);
     console.log(monTableau);
     this.SetDrinks(monTableau);
    
   }
+
+ 
+
+  
+
+  
 }
