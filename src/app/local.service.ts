@@ -30,8 +30,7 @@ export class LocalService {
       return JSON.parse(drinksString);
     } else {
       return [];
-    }
-    
+    }  
   }
   public SetDrink(items: any) {
     let drinks: any[] = this.GetDrink();

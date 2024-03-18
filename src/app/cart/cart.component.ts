@@ -11,9 +11,11 @@ import { Drink } from '../../model/drink';
 export class CartComponent implements OnInit {
   public boxs!: Array<any>; 
   public drinks!: Array<any>; 
+  public total!: number; 
   constructor(private LocalService: LocalService) {}
   ngOnInit() {
     this.findAllItems();
+    this.SetTotal()
   }
   private findAllItems(): void {
     this.boxs = this.LocalService.GetBox();
@@ -59,16 +61,27 @@ export class CartComponent implements OnInit {
     this.LocalService.clearCartDrink(id);
     this.findAllItems();
   }
+  private totalBoxPrice() {
+    let totalPrice : number = 0;  
+    this.boxs.forEach((box: any)=> {
+      totalPrice += box.quantity * box.startprice;
+    });
+    return totalPrice;
+  }
+  private totalDrinkPrice() {
+    let totalPrice : number = 0;  
+    this.drinks.forEach((drink: any)=> {
+      totalPrice += drink.quantity * drink.startprice;
+    });
+    return totalPrice;
+  }
+  public SetTotal() :void {
+    this.total = this.totalDrinkPrice() + this.totalBoxPrice(); 
+  }
 
 /*
   public totalCart(): number {
-    let total = 0;
-    item : 
-    item.forEach((item: Box | Drink) => {
-      total += +item.quantity * +item.startprice;
-    });
 
-    return total;
   }
 */ 
  

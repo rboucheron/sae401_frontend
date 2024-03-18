@@ -29,7 +29,7 @@ export class DrinkcardComponent implements OnInit {
   }
   
   private recoverDrink() {
-    this.DrinkService.getDrink(this.id).subscribe(
+    this.DrinkService.getDrinks().subscribe(
       (data: any) => {
         this.drink = data[0];
       },
