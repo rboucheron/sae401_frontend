@@ -5,6 +5,7 @@
                 <th class="text-2xl font-serif font-light">Détails</th>
                 <th class="text-2xl font-serif font-light">Quantité</th>
                 <th class="text-2xl font-serif font-light">Total</th>
+                <th class="text-2xl font-serif font-light">Action</th>
             </tr>
         </thead>
         <tbody class="w-full">
@@ -16,18 +17,23 @@
                 <td class="border-spacing-4  ">
                     <div
                         class="w-1/2 m-auto flex justify-center space-x-8 items-center border border-white rounded-full">
-                        <button class="p-2 text-2xl" (click)="removeItemFromCard(item.id)" >-</button> <span class="p-2  text-xl">{{item.quantity}}</span>
-                        <button class="p-2  text-2xl" (click)="addItemsToCard(item.id)" >+</button>
+                        <button class="p-2 text-2xl" (click)="removeItemFromCard(item.id)">-</button> <span
+                            class="p-2  text-xl">{{item.quantity}}</span>
+                        <button class="p-2  text-2xl" (click)="addItemsToCard(item.id)">+</button>
                     </div>
                 </td>
                 <td class="border-spacing-4">
                     <p class="w-full text-2xl text-center">{{ item.price | currency}}</p>
 
                 </td>
+                <td class="justify-center">
+                    <lucide-icon name="Trash2" class="pl-2" color="#ffffff" [size]="30" [strokeWidth]="1.5"
+                        (click)="deleteBox(item.id)"></lucide-icon>
+                </td>
             </tr>
         </tbody>
     </table>
     <div>
-        <h1 class="text-white text-2xl">Total de la commande : $ {{totalCart()}}</h1>
+        <h1 class="text-white text-2xl">Total de la commande : {{totalCart() | currency : 'EUR' }}</h1>
     </div>
 </div>

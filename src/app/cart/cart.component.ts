@@ -87,6 +87,16 @@ export class CartComponent implements OnInit {
     });
     
     return total;
+    
+  }
+
+  public deleteBox(id : number){
+this.LocalService.clearCartBox(id);
+this.findAllItems();
+  }
+
+  public deleteDrink(){
+
   }
   
   
