@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Box } from '../model/box'
+import { Drink } from '../model/drink'
 
 @Injectable({
   providedIn: 'root',
@@ -63,5 +65,19 @@ export class LocalService {
     const boxCount: number = this.CountBox();
     const drinkCount: number = this.CountDrink();
     return boxCount + drinkCount;
+  }
+  public clearCartBox (id : number){
+    const box: any = this.GetBox();
+    let index : number = box.findIndex(function(element : Box) {
+      return element.id == id;});
+    box.filter(function(Box : any, index : number));
+
+    console.log(index);
+  }
+  public clearCartDrink (id : number){
+    const drink: any = this.GetDrink();
+    let index : number = drink.findIndex(function(element : Drink) {
+      return element.id == id;});
+    drink.splice(index);
   }
 }
