@@ -62,7 +62,8 @@ export class CartComponent implements OnInit {
     this.findAllItems();
   }
   public deleteAll() : void {
-    return this.LocalService.SetDrinks([]), this.LocalService.SetBoxs([]);     
+    this.LocalService.SetDrinks([]), this.LocalService.SetBoxs([]); 
+    this.findAllItems();   
   }
 
   private totalBoxPrice() {
