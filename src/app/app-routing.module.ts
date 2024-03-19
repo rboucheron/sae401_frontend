@@ -7,6 +7,7 @@ import { BoxcardsComponent } from './boxcards/boxcards.component';
 import { CartComponent } from './cart/cart.component';
 import { DrinkcardComponent } from './drinkcard/drinkcard.component';
 import { DrinkcardsComponent } from './drinkcards/drinkcards.component';
+import { ErreurComponent } from './erreur/erreur.component';
 const routes: Routes = [
  
   { path: 'boisson', component: DrinkcardsComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'details/:id', component: DetailsComponent},
   { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent },
+  { path: '**', component: ErreurComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
