@@ -1,5 +1,5 @@
 <div class=" mt-32">
-    <table class="w-full table-fixed border-spacing-4  text-white ">
+    <table class="w-full table-fixed border-spacing-4 text-white ">
         <thead>
             <tr>
                 <th class="text-2xl font-serif font-light">Détails</th>
@@ -24,12 +24,13 @@
                     </div>
                 </td>
                 <td class="border-spacing-4">
-                    <p class="w-full text-2xl text-center">{{ box.price | currency}}</p>
+                    <p class="w-full text-2xl text-center">{{ box.price | currency :
+                        'EUR'}}</p>
 
                 </td>
-                <td class="justify-center">
-                    <lucide-icon name="Trash2" class="pl-2" color="#ffffff" [size]="30" [strokeWidth]="1.5"
-                        (click)=" deleteBox(box.id)"></lucide-icon>
+                <td class="items-center">
+                    <lucide-icon name="Trash2" class="pl-2" color="#ffffff" [size]="24" [strokeWidth]="1.5"
+                        (click)="deleteBox(box.id)"></lucide-icon>
                 </td>
             </tr>
 
@@ -47,23 +48,25 @@
                     </div>
                 </td>
                 <td class="border-spacing-4">
-                    <p class="w-full text-2xl text-center">{{ drink.price | currency}}</p>
+                    <p class="w-full text-2xl text-center">{{ drink.price | currency :
+                        'EUR'}}</p>
 
                 </td>
-                <td class="justify-center">
-                    <lucide-icon name="Trash2" class="pl-2" color="#ffffff" [size]="30" [strokeWidth]="1.5"
-                        (click)="deleteDrink(drink.id)"></lucide-icon>
+
+                <td class="border-spacing-4">
+                    <lucide-icon class="pl-20" name="Trash2" class="pl-2" color="#ffffff" [size]="24"
+                        [strokeWidth]="1.5" (click)="deleteDrink(drink.id)"></lucide-icon>
                 </td>
             </tr>
 
         </tbody>
     </table>
-    <div class="m-auto w-1/2 ">
-        <span>
-            <lucide-icon name="Trash2" class="pl-2" color="#ffffff" [size]="30" [strokeWidth]="1.5"
-                (click)="deleteAll()"></lucide-icon>
-        </span>
+    <div class="m-auto w-1/2 mb-12">
         <span class="text-white text-2xl text-center w-full">Total de la commande : {{total | currency :
-            'EUR' }}</span>
+            'EUR' }} <button (click)="deleteAll()" class="p-3 rounded-2xl text-white text-xl font-serif bg-red-500">
+                Vider le
+                panier</button> </span>
+
     </div>
+
 </div>
