@@ -7,7 +7,9 @@ Nom de l'application : Sushi House
 
 
 Logo : 
+<div style="text-align:center;">
 ![Logo Sushi House](./src/assets/images/logoo.png)
+</div>
 
 
 
