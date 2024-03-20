@@ -8,6 +8,10 @@ Nom de l'application : Sushi House
 
 Logo : 
 ![Logo Sushi House](./src/assets/images/logoo.png)
+
+
+
+
 Technologie utilisée pour le développement front_end : [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 [tailwindcss](https://tailwindcss.com/)
 
