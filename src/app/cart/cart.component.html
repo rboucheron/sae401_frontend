@@ -5,16 +5,13 @@
                 <th class="text-2xl font-serif font-light">Détails</th>
                 <th class="text-2xl font-serif font-light">Quantité</th>
                 <th class="text-2xl font-serif font-light">Total</th>
-                <!-- <th class="text-2xl font-serif font-light">Action</th>-->
-
             </tr>
         </thead>
         <tbody class="w-full">
-
             <tr *ngFor="let box of boxs" class="w-full border-b border-dashed mb-16">
                 <td class="flex flex-col p-4 items-center">
                     <h2 class="text-xl p-2 text-white">{{ box.name }}</h2><img [src]="box.image"
-                        class="size-52 rounded-md" [alt]=" box.name">
+                        class="size-52 rounded-md cover" [alt]=" box.name">
                 </td>
                 <td class="border-spacing-4  ">
                     <div
@@ -27,15 +24,12 @@
                 <td class="border-spacing-4">
                     <p class="w-full text-2xl text-center">{{ box.price | currency :
                         'EUR'}}</p>
-
                 </td>
-           
             </tr>
-
-            <tr *ngFor="let drink of drinks" class="w-full">
+            <tr *ngFor="let drink of drinks" class="w-full border-b border-dashed mb-16">
                 <td class="flex flex-col p-4 items-center">
                     <h2 class="text-xl p-2 text-white">{{ drink.name }}</h2><img [src]="drink.image"
-                        class="size-52 rounded-md" [alt]=" drink.name">
+                        class="size-52 rounded-md cover" [alt]=" drink.name">
                 </td>
                 <td class="border-spacing-4  ">
                     <div
@@ -48,22 +42,16 @@
                 <td class="border-spacing-4">
                     <p class="w-full text-2xl text-center">{{ drink.price | currency :
                         'EUR'}}</p>
-
                 </td>
-
             </tr>
-
         </tbody>
     </table>
     <div class="w-full mb-12 mt-12">
         <p class="text-white text-2xl text-center w-full">Total de la commande : {{ total | currency :'EUR' }}</p>
     </div>
-    <div class="">
+    <div class="w-1/2 m-auto flex mt-2 mb-4">
         <button (click)="deleteAll()"
             class=" p-3 rounded-2xl text-white text-sm font-serif bg-red-500 hover:bg-transparent ">Vider le
             panier</button>
-
     </div>
-
-
 </div>
