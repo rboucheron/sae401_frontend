@@ -42,7 +42,15 @@ export class CartComponent implements OnInit {
     if (index !== -1 && this.boxs[index].quantity > 0) {
       this.boxs[index].quantity--;
       this.boxs[index].price -= this.boxs[index].startprice;
-      this.LocalService.SetBoxs(this.boxs);
+      if ( this.boxs[index].quantity <= 0){
+        this.deleteBox (this.boxs[index].id); 
+
+      }else{
+        this.LocalService.SetBoxs(this.boxs);
+
+      }
+     
+
     }
   }
   public removeDrinkToCard (id: number)  : void {
