@@ -32,5 +32,23 @@ Technologie utilisée pour le développement front_end : [Angular CLI](https://g
 [liens vers le trello](https://trello.com/invite/b/bB11rJYZ/ATTIa3332ba1b0ecb6a44310823187a12c4757D9D428/sae-401)
 
 
+USER EVIL STORIES
+
+Story 1 :
+- Un client malveillant et qui s'y connait en informatique essaie d'accéder a notre code et modifier nos fonctions qui gèrent le prix total dans le panier. Il a acheté 5 boxs et veut modifier le total pour qu'il ait moins a payer.
+- Il accède au local storage et modifie les prix des boxes
+
+Notre solution : 
+- Ne stocker seulement les ID et la quantité des boxes dans le local storage.
+
+
+Story 2 : 
+- Un client malveillant et qui s'y connait en informatique essaie d'accéder a notre API et donc a notre base de données.
+- un client malveillant à accés à toutes les méthode du  crud il peut donc ajouter supprimer et modifier des données.  
+
+Notre solution : 
+- Nous avons supprimé les méthode CUD (POST, PUT, DELETE) et Pour empécher sela nous pouvons crée une authentification d'aministrateur
+
+
 
 
