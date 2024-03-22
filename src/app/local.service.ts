@@ -68,23 +68,14 @@ export class LocalService {
    
   public clearCartBox (id : number){   
     let monTableau : any = this.GetBox();
- 
     monTableau = monTableau.filter((Box : any) => Box.id !== id);
     console.log(monTableau);
     this.SetBoxs(monTableau);
-   
   }
   public clearCartDrink(id : number){   
     let monTableau : any = this.GetDrink(); 
     monTableau = monTableau.filter((Drink : any) => Drink.id !== id);
     console.log(monTableau);
     this.SetDrinks(monTableau);
-   
   }
-
- 
-
-  
-
-  
 }

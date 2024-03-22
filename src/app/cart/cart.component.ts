@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
   }
   public addBoxToCard (id: number)  : void  {
     const index: number = this.boxs.findIndex((element: Box) => element.id === id);
-    if (index !== -1) {
+    if (index !== -1 && this.LocalService.CountBox() != 10) {
       this.boxs[index].quantity++;
       this.boxs[index].price += this.boxs[index].startprice;
       this.LocalService.SetBoxs(this.boxs);
@@ -88,11 +88,6 @@ export class CartComponent implements OnInit {
     this.total = this.totalDrinkPrice() + this.totalBoxPrice(); 
   }
 
-/*
-  public totalCart(): number {
 
-  }
-*/ 
- 
 }
 
