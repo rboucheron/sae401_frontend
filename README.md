@@ -1,5 +1,12 @@
 # Sae 401 : Sushi House 🍣
 
+## Sommaire
+
+1. [Présentation du projet](#présentation-du-projet)
+2. [Analyse des besoins de l'application](#analyse-des-besoins-de-lapplication)
+3. [Collaboration](#collaboration)
+4. [USER EVIL STORIES](#user-evil-stories)
+
 ## Présentation du projet
 
 Nom de l'application : Sushi House
@@ -10,10 +17,6 @@ Nom de l'application : Sushi House
 Logo : 
 
   ![Logo Sushi House](./src/assets/images/logoo.png)
-  
-
-
-
 
 
 Technologie utilisée pour le développement front_end : [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
@@ -32,7 +35,7 @@ Technologie utilisée pour le développement front_end : [Angular CLI](https://g
 [liens vers le trello](https://trello.com/invite/b/bB11rJYZ/ATTIa3332ba1b0ecb6a44310823187a12c4757D9D428/sae-401)
 
 
-USER EVIL STORIES
+## USER EVIL STORIES
 
 Story 1 :
 - Un client malveillant et qui s'y connait en informatique essaie d'accéder a notre code et modifier nos fonctions qui gèrent le prix total dans le panier. Il a acheté 5 boxs et veut modifier le total pour qu'il ait moins a payer.
