@@ -38,7 +38,7 @@ Technologie utilisée pour le développement front_end : [Angular CLI](https://g
 
 ## Collaboration 
 
-[liens vers le trello](https://www.figma.com/file/qpG2KFLAUv3hHR27enkNqU/SAE401-official?type=design&node-id=0%3A1&mode=design&t=aMFWBRDuvlRaXBfH-1)
+[liens vers le trello](https://trello.com/invite/b/bB11rJYZ/ATTIa3332ba1b0ecb6a44310823187a12c4757D9D428/sae-401)
 
 
 ## USER EVIL STORIES
