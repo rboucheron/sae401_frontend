@@ -81,12 +81,10 @@ export class CartComponent implements OnInit {
     return totalPrice;
   }
 
-  
-
-
   public SetTotal() :void {
     this.total = this.totalDrinkPrice() + this.totalBoxPrice(); 
   }
+
 
 /*
   public totalCart(): number {

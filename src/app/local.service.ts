@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-/*import { Box } from '../model/box'
-import { Drink } from '../model/drink'*/
+import { Box } from 'lucide-angular';
 
 @Injectable({
   providedIn: 'root',
@@ -20,10 +19,18 @@ export class LocalService {
     let boxs: any[] = this.GetBox();
     boxs.push(items);
     localStorage.setItem('box', JSON.stringify(boxs));
-  }
+ }
   public SetBoxs(items: any) {
-    localStorage.setItem('box', JSON.stringify(items));
+      
+      
+      
+      localStorage.setItem('box', JSON.stringify(items));
   }
+   
+  
+
+
+
   public GetDrink(): any[] {
     const drinksString: string | null = localStorage.getItem('drink');
     if (drinksString !== null) {
@@ -47,8 +54,13 @@ export class LocalService {
  
     for (let i:number = 0; i < boxs.length; i++){
       boxcount = boxcount + boxs[i].quantity; 
+      
     }
     return boxcount; 
+   
+  
+    
+    
   }
   public CountDrink() {
     let drinks: any[] = this.GetDrink();
@@ -82,9 +94,7 @@ export class LocalService {
    
   }
 
- 
 
-  
 
   
 }
