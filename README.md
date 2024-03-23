@@ -4,8 +4,10 @@
 
 1. [Présentation du projet](#présentation-du-projet)
 2. [Analyse des besoins de l'application](#analyse-des-besoins-de-lapplication)
-3. [Collaboration](#collaboration)
-4. [USER EVIL STORIES](#user-evil-stories)
+3. [diagramme de class](#diagramme-de-class)
+4. [diagramme d'activité](#diagramme-d'activité)
+5. [Collaboration](#collaboration)
+6. [USER EVIL STORIES](#user-evil-stories)
 
 ## Présentation du projet
 
@@ -57,5 +59,14 @@ Notre solution :
 - Nous avons supprimé les méthode CUD (POST, PUT, DELETE) et Pour empécher sela nous pouvons crée une authentification d'aministrateur
 
 
+## Maquette
 
 
+![ acceuil ](./src/assets/images/Capture%20d’écran%202024-03-23%20à%2016.42.18.jpeg)
+![ boxs ](./src/assets/images/Capture%20d’écran%202024-03-23%20à%2016.43.45.jpeg)
+![ boxs ](./src/assets/images/Capture%20d’écran%202024-03-23%20à%2016.44.05.jpeg)
+![ boxs ](./src/assets/images/Capture%20d’écran%202024-03-23%20à%2016.44.41.jpeg)
+![ boxs ](./src/assets/images/Capture%20d’écran%202024-03-23%20à%2016.45.22.jpeg)
+
+
+[liens vers la figma](https://www.figma.com/file/qpG2KFLAUv3hHR27enkNqU/SAE401-official?type=design&node-id=0%3A1&mode=design&t=aLZhk8esmMo1Hsnd-1)
