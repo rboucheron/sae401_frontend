@@ -12,7 +12,9 @@ export class CartComponent implements OnInit {
   public boxs!: Array<any>;
   public drinks!: Array<any>;
   public total!: number;
+
   constructor(private LocalService: LocalService) {}
+
   ngOnInit() {
     this.findAllItems();
     this.SetTotal();
@@ -30,6 +32,7 @@ export class CartComponent implements OnInit {
       this.boxs[index].price += this.boxs[index].startprice;
       this.LocalService.SetBoxs(this.boxs);
     }
+    this.SetTotal();
   }
   public addDrinkToCard(id: number): void {
     const index: number = this.drinks.findIndex(
@@ -40,6 +43,7 @@ export class CartComponent implements OnInit {
       this.drinks[index].price += this.drinks[index].startprice;
       this.LocalService.SetDrinks(this.drinks);
     }
+    this.SetTotal();
   }
   public removeBoxToCard(id: number): void {
     const index: number = this.boxs.findIndex(
@@ -54,6 +58,7 @@ export class CartComponent implements OnInit {
         this.LocalService.SetBoxs(this.boxs);
       }
     }
+    this.SetTotal();
   }
   public removeDrinkToCard(id: number): void {
     const index: number = this.drinks.findIndex(
@@ -69,6 +74,7 @@ export class CartComponent implements OnInit {
         this.LocalService.SetDrinks(this.drinks);
       }
     }
+    this.SetTotal();
   }
   public deleteBox(id: number): void {
     this.LocalService.clearCartBox(id);
@@ -98,7 +104,7 @@ export class CartComponent implements OnInit {
     return totalPrice;
   }
 
-  public SetTotal(): void {
+  private SetTotal(): void {
     this.total = this.totalDrinkPrice() + this.totalBoxPrice();
   }
 }

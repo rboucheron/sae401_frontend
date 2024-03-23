@@ -49,9 +49,11 @@
     <div class="w-full mb-12 mt-12">
         <p class="text-white text-2xl text-center w-full">Total de la commande : {{ total | currency :'EUR' }}</p>
     </div>
-    <div class="w-1/2 m-auto flex mt-2 mb-4">
+    <div class="w-1/2 m-auto flex justify-center items-center space-x-6 items-center  mb-4">
         <button (click)="deleteAll()"
             class=" p-3 rounded-2xl text-white text-sm font-serif bg-red-500 hover:bg-transparent ">Vider le
             panier</button>
+
+            <button class=" p-3 rounded-2xl text-white text-sm font-serif bg-green-500 hover:bg-transparent ">Valider le Panier</button>
     </div>
 </div>
