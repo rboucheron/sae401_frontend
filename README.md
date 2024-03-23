@@ -30,6 +30,10 @@ Technologie utilisée pour le développement front_end : [Angular CLI](https://g
 
 ![ diagramme de class ](./src/assets/images/Diagramme%20de%20classes%20Lucidchart.png)
 
+## diagramme de class
+
+![ diagramme de class ](./src/assets/images/diagramme%20d'activité.png)
+
 ## Collaboration 
 
 [liens vers le trello](https://trello.com/invite/b/bB11rJYZ/ATTIa3332ba1b0ecb6a44310823187a12c4757D9D428/sae-401)
