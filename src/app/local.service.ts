@@ -48,8 +48,13 @@ export class LocalService {
     let boxcount : number = 0; 
     for (let i:number = 0; i < boxs.length; i++){
       boxcount = boxcount + boxs[i].quantity; 
+      
     }
     return boxcount; 
+   
+  
+    
+    
   }
 
   public CountDrink() {
