@@ -3,9 +3,9 @@ export class Box {
     public id: number,
     public name: string,
     public pieces: number,
-    public price: string,
+    public price: number,
     public image: string,
     public quantity: number, 
-    public startprice: string, 
+    public startprice: number, 
   ) {}
 }

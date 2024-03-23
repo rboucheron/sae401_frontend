@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-
-
+import { Drink } from '../model/drink';
+import { Box } from '../model/box';
 @Injectable({
   providedIn: 'root',
 })
@@ -16,16 +16,16 @@ export class LocalService {
     }
   }
 
-  public SetBox(items: any) {
-    let boxs: any[] = this.GetBox();
+  public SetBox(items: Box) {
+    let boxs: Array<Box> = this.GetBox();
     boxs.push(items);
     localStorage.setItem('box', JSON.stringify(boxs));
   }
 
-  public SetBoxs(items: any) {
+  public SetBoxs(items: Array<Box>) {
     localStorage.setItem('box', JSON.stringify(items));
   }
-  public GetDrink(): any[] {
+  public GetDrink(): Array<Drink>  {
     const drinksString: string | null = localStorage.getItem('drink');
     if (drinksString !== null) {
       return JSON.parse(drinksString);
@@ -33,18 +33,18 @@ export class LocalService {
       return [];
     }  
   }
-  public SetDrink(items: any) {
-    let drinks: any[] = this.GetDrink();
+  public SetDrink(items: Drink) {
+    let drinks: Array<Drink> = this.GetDrink();
     drinks.push(items);
     localStorage.setItem('drink', JSON.stringify(drinks));
   }
 
-  public SetDrinks(items: any) {
+  public SetDrinks(items: Array<Drink>) {
     localStorage.setItem('drink', JSON.stringify(items));
   }
 
   public CountBox() {
-    let boxs: any[] = this.GetBox();
+    let boxs: Array<Box> = this.GetBox();
     let boxcount : number = 0; 
     for (let i:number = 0; i < boxs.length; i++){
       boxcount = boxcount + boxs[i].quantity; 
@@ -53,9 +53,8 @@ export class LocalService {
   }
 
   public CountDrink() {
-    let drinks: any[] = this.GetDrink();
+    let drinks: Array<Drink> = this.GetDrink();
     let drinkscount : number =0;
-
     for(let i:number =0; i<drinks.length; i++){
       drinkscount = drinkscount + drinks[i].quantity;
     }
@@ -71,14 +70,21 @@ export class LocalService {
   public clearCartBox (id : number){   
     let monTableau : any = this.GetBox();
     monTableau = monTableau.filter((Box : any) => Box.id !== id);
-    console.log(monTableau);
     this.SetBoxs(monTableau);
   }
 
   public clearCartDrink(id : number){   
     let monTableau : any = this.GetDrink(); 
     monTableau = monTableau.filter((Drink : any) => Drink.id !== id);
-    console.log(monTableau);
     this.SetDrinks(monTableau);
   }
+
+  public setCommande (commande : Array<any>) {
+    localStorage.setItem('commande', JSON.stringify(commande));
+  }
+
+
+
+
+
 }

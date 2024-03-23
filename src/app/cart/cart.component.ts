@@ -9,8 +9,8 @@ import { Drink } from '../../model/drink';
   templateUrl: './cart.component.html',
 })
 export class CartComponent implements OnInit {
-  public boxs!: Array<any>;
-  public drinks!: Array<any>;
+  public boxs!: Array<Box>;
+  public drinks!: Array<Drink>;
   public total!: number;
 
   constructor(private LocalService: LocalService) {}

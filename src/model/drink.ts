@@ -3,10 +3,10 @@ export class Drink {
       public id: number,
       public name: string,
       public image: string,
-      public price: string,
+      public price: number,
       public savor: string,
       public quantity: number, 
-      public startprice: string, 
+      public startprice: number, 
       public pieces: number,
       
       
