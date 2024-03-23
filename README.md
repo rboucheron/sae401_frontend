@@ -30,7 +30,7 @@ Technologie utilisée pour le développement front_end : [Angular CLI](https://g
 
 ![ diagramme de class ](./src/assets/images/Diagramme%20de%20classes%20Lucidchart.png)
 
-## diagramme de class
+## diagramme d'activité
 
 ![ diagramme de class ](./src/assets/images/diagramme%20d'activité.png)
 
