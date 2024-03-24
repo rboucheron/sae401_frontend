@@ -8,6 +8,11 @@
 4. [diagramme d'activité](#diagramme-d'activité)
 5. [Collaboration](#collaboration)
 6. [USER EVIL STORIES](#user-evil-stories)
+7. [Le RGPD](#Le-RGPD)
+8. [Le Maquette](#Maquette)
+8. [Conclusion](#Conclusion)
+
+
 
 ## Présentation du projet
 
@@ -58,6 +63,11 @@ Story 2 :
 Notre solution : 
 - Nous avons supprimé les méthode CUD (POST, PUT, DELETE) et Pour empécher sela nous pouvons crée une authentification d'aministrateur
 
+## Le RGPD 
+
+ Notre application/site web ne récolte pas les données personnelles des utilisateurs, ce qui signifie que nous ne recueillons pas d'informations telles que les noms, adresses e-mail, numéros de téléphone, ou d'autres données identifiant directement les utilisateurs. Par conséquent, nous n'avons pas besoin de réaliser d'évaluation des risques pour la protection des données (RGPD).
+
+Le RGPD (Règlement Général sur la Protection des Données) est une législation européenne qui vise à renforcer et à unifier la protection des données pour tous les individus au sein de l'Union européenne (UE). Il impose des obligations strictes aux entreprises qui collectent, traitent ou stockent des données personnelles des citoyens de l'UE. Cependant, puisque notre activité n'implique pas la collecte de telles données, nous ne sommes pas soumis aux exigences du RGPD. 
 
 ## Maquette
 
@@ -70,3 +80,8 @@ Notre solution :
 
 
 [liens vers la figma](https://www.figma.com/file/qpG2KFLAUv3hHR27enkNqU/SAE401-official?type=design&node-id=0%3A1&mode=design&t=aLZhk8esmMo1Hsnd-1)
+
+## Conclusion 
+
+Nous avons développé une application qui simplifie la commande de sushis en utilisant des bornes interactives. Grâce à une API REST, les utilisateurs peuvent parcourir les différents menus disponibles et passer leurs commandes facilement. Tout le processus de sélection des articles et de validation des commandes est géré localement dans le navigateur de l'utilisateur. Nous avons utiliser le framework Angular qui assure une expérience fluide et qui facilite le développement. Grace à l’architecture de single page application (SPA), nous avons réussi à éviter le rechargement complet du site à chaque transition de page. 
+Durant ce projet, nous avons appris à utiliser le framework Angular, le langage TypeScript et le framework CSS Tailwind. Côté back-end, nous avons réalisé une API REST.
