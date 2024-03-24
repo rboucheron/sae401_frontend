@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent  {
 
+  public burguer : boolean = false; 
+
 
 
     constructor(private ShoppingcartsService:ShoppingcartsService, private  LocalService:LocalService){}
@@ -18,4 +20,11 @@ export class HeaderComponent  {
       return this.LocalService.getTotalCount(); 
     }
     
+    public toggleBurguer() :void {
+      if ( this.burguer == true) {
+        this.burguer = false
+      }else{
+        this.burguer = true; 
+      }
+    }
 }

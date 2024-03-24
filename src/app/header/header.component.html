@@ -13,10 +13,29 @@
                 <lucide-icon name="ShoppingBasket" color="#ffffff" [size]="30"
                     [strokeWidth]="1.5"></lucide-icon>{{itemsCount ()}}
             </a>
-        
-            <a href="" class="flex items-end mr-4 lg:hidden ">
+
+            <div class="flex items-end mr-4 lg:hidden " (click)="toggleBurguer() " [ngClass]="{'hidden': burguer}">
                 <lucide-icon name="Menu" color="#ffffff" [size]="30" [strokeWidth]="1.5"></lucide-icon>
-            </a>
+            </div>
         </div>
     </div>
 </nav>
+
+<div class="hidden" [ngClass]="{'hidden': !burguer}">
+
+
+    <div class=" w-full h-full bg-zinc-800 opacity-75 block absolute z-50">
+     
+        <div class="mt-11 pt-10 flex justify-center w-full">
+            <a routerLink="/" class="text-slate-50 text-center font-serif text-3xl " (click)="toggleBurguer() ">Acceuil</a>
+        </div>
+        <div class="mt-11  flex justify-center  w-full">
+            <a routerLink="menus" class="text-slate-50 text-center font-serif text-3xl " (click)="toggleBurguer() ">Menus</a>
+        </div>
+        <div class="mt-11  flex justify-center w-full">
+            <a routerLink="boisson" class="text-slate-50 text-center font-serif text-3xl " (click)="toggleBurguer() ">Boissons</a>
+        </div>
+    </div>
+
+
+</div>
